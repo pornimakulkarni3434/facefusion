@@ -64,7 +64,7 @@ def parse_args() -> None:
 	facefusion.globals.source_path = args.source_path
 	facefusion.globals.target_path = args.target_path
 	facefusion.globals.output_path = normalize_output_path(facefusion.globals.source_path, facefusion.globals.target_path, args.output_path)
-	facefusion.globals.frame_processors = args.frame_processors
+	facefusion.globals.frame_processors = args.frame_processors.split(",")
 	facefusion.globals.ui_layouts = args.ui_layouts
 	facefusion.globals.keep_fps = args.keep_fps
 	facefusion.globals.keep_temp = args.keep_temp
