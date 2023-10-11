@@ -84,7 +84,7 @@ def parse_args() -> None:
 	facefusion.globals.output_video_encoder = args.output_video_encoder
 	facefusion.globals.output_video_quality = args.output_video_quality
 	facefusion.globals.max_memory = args.max_memory
-	facefusion.globals.execution_providers = decode_execution_providers(args.execution_providers)
+	facefusion.globals.execution_providers = decode_execution_providers(args.execution_providers.split(","))
 	facefusion.globals.execution_thread_count = args.execution_thread_count
 	facefusion.globals.execution_queue_count = args.execution_queue_count
 	facefusion.globals.skip_download = args.skip_download
